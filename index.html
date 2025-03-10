@@ -3,13 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Temas</title>
+    <title>Participação Social para o Plano Plurianual de Fortaleza 2026 a 2029</title>
     <style>
+        body {
+            background-color: #ffcc99; /* Fundo laranja claro */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold; /* Bairro em negrito */
+        }
         .tema {
             margin-bottom: 20px;
             border: 1px solid #ccc;
             padding: 10px;
             cursor: pointer;
+            border-radius: 5px;
+        }
+        .tema:nth-child(odd) {
+            background-color: #ccffcc; /* Verde claro para temas ímpares */
+        }
+        .tema:nth-child(even) {
+            background-color: #ccffff; /* Azul claro para temas pares */
         }
         .conteudo {
             display: none;
@@ -19,6 +39,8 @@
             width: 100%;
             padding: 8px;
             margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
         .conteudo button {
             padding: 10px 20px;
@@ -26,6 +48,7 @@
             color: white;
             border: none;
             cursor: pointer;
+            border-radius: 4px;
         }
         .conteudo button:hover {
             background-color: #45a049;
@@ -33,11 +56,12 @@
         .pergunta-generica {
             font-weight: bold;
             margin-top: 10px;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <h1>Formulário de Temas</h1>
+    <h1>Participação Social para o Plano Plurianual de Fortaleza 2026 a 2029</h1>
     <label for="bairro">Bairro:</label>
     <input type="text" id="bairro" name="bairro" placeholder="Digite o nome do bairro"><br><br>
 
