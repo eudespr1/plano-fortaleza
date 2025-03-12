@@ -3,201 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Participação Social para o Plano Plurianual de Fortaleza 2026 a 2029</title>
+    <title>Participação Social para o Plano Plurianual</title>
     <style>
-        body {
-            background-color: #ffcc99; /* Fundo laranja claro */
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        label {
-            font-weight: bold; /* Bairro em negrito */
-        }
-        .tema {
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .tema:nth-child(odd) {
-            background-color: #ccffcc; /* Verde claro para temas ímpares */
-        }
-        .tema:nth-child(even) {
-            background-color: #ccffff; /* Azul claro para temas pares */
-        }
-        .conteudo {
-            display: none;
-            margin-top: 10px;
-        }
-        .conteudo input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .conteudo button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        .conteudo button:hover {
-            background-color: #45a049;
-        }
-        .pergunta-generica {
-            font-weight: bold;
-            margin-top: 10px;
-            color: #333;
-        }
+        body { background-color: #fdebd0; font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+        h1 { text-align: center; color: #333; }
+        label { font-weight: bold; }
+        .tema { margin-bottom: 20px; border: 1px solid #ccc; padding: 10px; cursor: pointer; border-radius: 5px; }
+        .tema:nth-child(odd) { background-color: #d0ece7; }
+        .tema:nth-child(even) { background-color: #d6eaf8; }
+        .conteudo { display: none; margin-top: 10px; }
+        .conteudo input { width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        .botao-enviar { display: block; width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer; border-radius: 4px; text-align: center; }
+        .botao-enviar:hover { background-color: #45a049; }
     </style>
 </head>
 <body>
-    <h1>Participação Social para o Plano Plurianual de Fortaleza 2026 a 2029</h1>
-    <label for="bairro">Bairro:</label>
-    <input type="text" id="bairro" name="bairro" placeholder="Digite o nome do bairro"><br><br>
-
-    <!-- Tema 1: Redução da Desigualdade Social e Territorial -->
-    <div class="tema" onclick="toggleConteudo('tema1')">
-        <h2>Tema: Redução da Desigualdade Social e Territorial</h2>
-        <p><strong>Explicação:</strong> "Queremos reduzir a desigualdade social em Fortaleza, reduzindo a fome, melhorando as condições de moradia e cuidando dos moradores de rua."</p>
-        <p class="pergunta-generica">"Quais ações você sugere para diminuir as desigualdades na cidade?"</p>
-        <div id="tema1" class="conteudo">
-            <label>1. Quais ações podemos tomar para reduzir a fome e a insegurança alimentar na sua comunidade?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>2. O que poderia ser feito para melhorar as condições de moradia em sua área?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>3. Que tipo de apoio social é necessário para pessoas em situação de rua?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>4. Como podemos garantir que todos tenham as mesmas oportunidades?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <button>Enviar</button>
+    <h1>Participação Social para o Plano Plurianual de Fortaleza (2026-2029)</h1>
+    
+    <form action="https://docs.google.com/forms/d/e/SEU_ID/formResponse" method="POST">
+        
+        <label for="bairro">Escolha seu bairro:</label>
+        <input type="text" name="entry.1234567890" placeholder="Digite seu bairro"><br><br>
+        
+        <!-- Tema 1 -->
+        <div class="tema" onclick="toggleConteudo('tema1')">
+            <h2>Tema 1 - Redução da Desigualdade Social</h2>
+            <div id="tema1" class="conteudo">
+                <label>1. Ações para reduzir a fome:</label>
+                <input type="text" name="entry.2345678901" placeholder="Digite sua resposta"><br>
+                <label>2. Melhorias na moradia:</label>
+                <input type="text" name="entry.3456789012" placeholder="Digite sua resposta"><br>
+            </div>
         </div>
-    </div>
-
-    <!-- Tema 2: Segurança Viária, Mobilidade Urbana e Acessibilidade -->
-    <div class="tema" onclick="toggleConteudo('tema2')">
-        <h2>Tema: Segurança Viária, Mobilidade Urbana e Acessibilidade</h2>
-        <p><strong>Explicação:</strong> "Desejamos melhorar a segurança no trânsito, o acesso ao transporte público e o deslocamento pela cidade, seja a pé ou por qualquer meio de transporte."</p>
-        <p class="pergunta-generica">"Quais ideias você sugere para melhorar a mobilidade na cidade?"</p>
-        <div id="tema2" class="conteudo">
-            <label>1. Quais melhorias são necessárias nas vias e calçadas para que todos possam andar com facilidade e segurança?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>2. Como podemos diminuir acidentes e mortes no trânsito para motociclistas e pedestres?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>3. Que mudanças você sugere para melhorar o transporte público?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <button>Enviar</button>
+        
+        <!-- Tema 2 -->
+        <div class="tema" onclick="toggleConteudo('tema2')">
+            <h2>Tema 2 - Mobilidade Urbana</h2>
+            <div id="tema2" class="conteudo">
+                <label>1. Melhorias em vias e calçadas:</label>
+                <input type="text" name="entry.4567890123" placeholder="Digite sua resposta"><br>
+                <label>2. Segurança no trânsito:</label>
+                <input type="text" name="entry.5678901234" placeholder="Digite sua resposta"><br>
+            </div>
         </div>
-    </div>
+        
+        <!-- Botão de Envio -->
+        <button type="submit" class="botao-enviar">Enviar Respostas</button>
 
-    <!-- Tema 3: Acolhimento Inclusivo e Qualidade nos Serviços Municipais -->
-    <div class="tema" onclick="toggleConteudo('tema3')">
-        <h2>Tema: Acolhimento Inclusivo e Qualidade nos Serviços Municipais</h2>
-        <p><strong>Explicação:</strong> "Queremos garantir que todos os serviços públicos sejam acolhedores e de uso de todos, principalmente para pessoas que precisam de mais apoio, como idosos, pessoas com deficiência, crianças ou quem passa por dificuldades financeiras. Precisamos de ideias de como podemos melhorar os serviços de saúde, educação e assistência social para sua comunidade."</p>
-        <p class="pergunta-generica">"Que ideias você tem para tornar os serviços públicos mais inclusivos e acessíveis?"</p>
-        <div id="tema3" class="conteudo">
-            <label>1. O que pode ser feito para melhorar o atendimento de saúde para idosos, mulheres e crianças?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>2. Como podemos tornar os serviços públicos de fácil acesso para pessoas com deficiência?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>3. Quais ações são importantes para que os serviços públicos atendam bem pessoas que precisam de mais cuidado, como idosos, pessoas com deficiência e outros grupos vulneráveis?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>4. O que é necessário para garantir uma educação de qualidade para todas as crianças?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <button>Enviar</button>
-        </div>
-    </div>
-
-    <!-- Tema 4: Convivência Ambiental Sustentável -->
-    <div class="tema" onclick="toggleConteudo('tema4')">
-        <h2>Tema: Convivência Ambiental Sustentável</h2>
-        <p><strong>Explicação:</strong> "Fortaleza precisa proteger o meio ambiente e conciliar o desenvolvimento econômico com a preservação ambiental."</p>
-        <p class="pergunta-generica">"Que ideias você sugere para promover ações que visam respeitar o meio ambiente, economizar recursos e causar menos impacto em sua comunidade?"</p>
-        <div id="tema4" class="conteudo">
-            <label>1. Que ideias você tem para reduzir a poluição e proteger os rios, riachos e lagoas?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>2. Como podemos incentivar hortas comunitárias e agricultura urbana?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>3. Quais ideias você sugere para aumentar as áreas verdes perto de você?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>4. Que sugestões você tem para melhorar a coleta seletiva e a reciclagem?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <button>Enviar</button>
-        </div>
-    </div>
-
-    <!-- Tema 5: Emprego e Renda -->
-    <div class="tema" onclick="toggleConteudo('tema5')">
-        <h2>Tema: Emprego e Renda</h2>
-        <p><strong>Explicação:</strong> “Nosso objetivo é criar mais oportunidades de emprego e elevar a renda da população de Fortaleza. Para isso, buscamos sugestões para apoiar ideias inovadoras, transformá-las em negócios viáveis, incentivar a qualificação profissional e fortalecer os pequenos negócios.”</p>
-        <p class="pergunta-generica">"O que você sugere para ajudar a criar empregos e melhorar as condições de trabalho em sua comunidade?"</p>
-        <div id="tema5" class="conteudo">
-            <label>1. Que ações podem ajudar a gerar mais empregos onde você mora?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>2. Que tipos de cursos de qualificação profissional são importantes?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>3. Como podemos ajudar a transformar ideias em negócios e apoiar pequenos negócios?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>4. O que é necessário para apoiar trabalhadores autônomos ou informais?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <button>Enviar</button>
-        </div>
-    </div>
-
-    <!-- Tema 6: Valorização do Patrimônio Cultural e Requalificação Urbana -->
-    <div class="tema" onclick="toggleConteudo('tema6')">
-        <h2>Tema: Valorização do Patrimônio Cultural e Requalificação Urbana</h2>
-        <p><strong>Explicação:</strong> "Fortaleza quer preservar sua história e cultura, revitalizando espaços urbanos e promovendo eventos culturais e esportivos por toda a cidade."</p>
-        <p class="pergunta-generica">"Como podemos preservar nossa cultura e melhorar os espaços públicos em sua comunidade?"</p>
-        <div id="tema6" class="conteudo">
-            <label>1. Que áreas da cidade precisam ser revitalizadas?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>2. Quais ações podem fortalecer a cultura e os eventos locais?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>3. O que é necessário para preservar o patrimônio histórico de nossa cidade?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>4. Como podemos garantir que a cultura e o esporte sejam acessíveis para todos?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <button>Enviar</button>
-        </div>
-    </div>
-
-    <!-- Tema 7: Governança e Gestão Pública Compartilhada -->
-    <div class="tema" onclick="toggleConteudo('tema7')">
-        <h2>Tema: Governança e Gestão Pública Compartilhada</h2>
-        <p><strong>Explicação:</strong> "Precisamos que a população participe mais das decisões do governo e que os serviços públicos sejam mais transparentes e eficientes."</p>
-        <p class="pergunta-generica">"Que ações podem ser feitas para aumentar a participação da população nas decisões públicas?"</p>
-        <div id="tema7" class="conteudo">
-            <label>1. O que pode ser feito para melhorar o diálogo entre a população e o governo?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>2. Que ações podem tornar o orçamento participativo mais inclusivo?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>3. Como podemos garantir maior transparência nas ações do governo?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <label>4. Que sugestões você tem para melhorar os serviços públicos e o atendimento ao cidadão?</label>
-            <input type="text" placeholder="Digite sua resposta"><br>
-            <button>Enviar</button>
-        </div>
-    </div>
+    </form>
 
     <script>
         function toggleConteudo(id) {
             var conteudo = document.getElementById(id);
-            if (conteudo.style.display === "block") {
-                conteudo.style.display = "none";
-            } else {
-                conteudo.style.display = "block";
-            }
+            conteudo.style.display = (conteudo.style.display === "block") ? "none" : "block";
         }
     </script>
+</body>
+</html>
+
 </body>
 </html>
