@@ -3,50 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Participação Social para o Plano Plurianual</title>
+    <title>Participação Social - Plano Plurianual Fortaleza (2026-2029)</title>
     <style>
         body { background-color: #fdebd0; font-family: Arial, sans-serif; margin: 0; padding: 20px; }
         h1 { text-align: center; color: #333; }
-        label { font-weight: bold; }
-        .tema { margin-bottom: 20px; border: 1px solid #ccc; padding: 10px; cursor: pointer; border-radius: 5px; }
+        label { font-weight: bold; display: block; margin-top: 10px; }
+        .tema { margin-bottom: 20px; border: 1px solid #ccc; padding: 10px; border-radius: 5px; cursor: pointer; }
         .tema:nth-child(odd) { background-color: #d0ece7; }
         .tema:nth-child(even) { background-color: #d6eaf8; }
         .conteudo { display: none; margin-top: 10px; }
         .conteudo input { width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; }
-        .botao-enviar { display: block; width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer; border-radius: 4px; text-align: center; }
+        .botao-enviar { display: block; width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer; border-radius: 4px; text-align: center; margin-top: 20px; }
         .botao-enviar:hover { background-color: #45a049; }
     </style>
 </head>
 <body>
-    <h1>Participação Social para o Plano Plurianual de Fortaleza (2026-2029)</h1>
-    
+    <h1>Participação Social - Plano Plurianual Fortaleza (2026-2029)</h1>
+
     <form action="https://docs.google.com/forms/d/e/SEU_ID/formResponse" method="POST">
-        
+
+        <!-- Bairro -->
         <label for="bairro">Escolha seu bairro:</label>
         <input type="text" name="entry.1234567890" placeholder="Digite seu bairro"><br><br>
-        
+
         <!-- Tema 1 -->
         <div class="tema" onclick="toggleConteudo('tema1')">
             <h2>Tema 1 - Redução da Desigualdade Social</h2>
-            <div id="tema1" class="conteudo">
-                <label>1. Ações para reduzir a fome:</label>
-                <input type="text" name="entry.2345678901" placeholder="Digite sua resposta"><br>
-                <label>2. Melhorias na moradia:</label>
-                <input type="text" name="entry.3456789012" placeholder="Digite sua resposta"><br>
-            </div>
         </div>
-        
+        <div id="tema1" class="conteudo">
+            <label>1. Ações para reduzir a fome:</label>
+            <input type="text" name="entry.2345678901" placeholder="Digite sua resposta">
+            <label>2. Melhorias na moradia:</label>
+            <input type="text" name="entry.3456789012" placeholder="Digite sua resposta">
+        </div>
+
         <!-- Tema 2 -->
         <div class="tema" onclick="toggleConteudo('tema2')">
-            <h2>Tema 2 - Mobilidade Urbana</h2>
-            <div id="tema2" class="conteudo">
-                <label>1. Melhorias em vias e calçadas:</label>
-                <input type="text" name="entry.4567890123" placeholder="Digite sua resposta"><br>
-                <label>2. Segurança no trânsito:</label>
-                <input type="text" name="entry.5678901234" placeholder="Digite sua resposta"><br>
-            </div>
+            <h2>Tema 2 - Segurança Viária e Mobilidade Urbana</h2>
         </div>
-        
+        <div id="tema2" class="conteudo">
+            <label>1. Melhorias em vias e calçadas:</label>
+            <input type="text" name="entry.4567890123" placeholder="Digite sua resposta">
+            <label>2. Segurança no trânsito:</label>
+            <input type="text" name="entry.5678901234" placeholder="Digite sua resposta">
+        </div>
+
+        <!-- Tema 3 -->
+        <div class="tema" onclick="toggleConteudo('tema3')">
+            <h2>Tema 3 - Qualidade nos Serviços Públicos</h2>
+        </div>
+        <div id="tema3" class="conteudo">
+            <label>1. Como melhorar o atendimento de saúde?</label>
+            <input type="text" name="entry.6789012345" placeholder="Digite sua resposta">
+            <label>2. Acessibilidade para PCDs:</label>
+            <input type="text" name="entry.7890123456" placeholder="Digite sua resposta">
+        </div>
+
+        <!-- Tema 4 -->
+        <div class="tema" onclick="toggleConteudo('tema4')">
+            <h2>Tema 4 - Sustentabilidade Ambiental</h2>
+        </div>
+        <div id="tema4" class="conteudo">
+            <label>1. Redução da poluição e proteção ambiental:</label>
+            <input type="text" name="entry.8901234567" placeholder="Digite sua resposta">
+            <label>2. Incentivo à reciclagem:</label>
+            <input type="text" name="entry.9012345678" placeholder="Digite sua resposta">
+        </div>
+
+        <!-- Tema 5 -->
+        <div class="tema" onclick="toggleConteudo('tema5')">
+            <h2>Tema 5 - Emprego e Renda</h2>
+        </div>
+        <div id="tema5" class="conteudo">
+            <label>1. Como gerar mais empregos?</label>
+            <input type="text" name="entry.0123456789" placeholder="Digite sua resposta">
+            <label>2. Cursos de qualificação profissional:</label>
+            <input type="text" name="entry.1123456789" placeholder="Digite sua resposta">
+        </div>
+
+        <!-- Tema 6 -->
+        <div class="tema" onclick="toggleConteudo('tema6')">
+            <h2>Tema 6 - Cultura e Requalificação Urbana</h2>
+        </div>
+        <div id="tema6" class="conteudo">
+            <label>1. Áreas que precisam ser revitalizadas:</label>
+            <input type="text" name="entry.2123456789" placeholder="Digite sua resposta">
+            <label>2. Como fortalecer a cultura local?</label>
+            <input type="text" name="entry.3123456789" placeholder="Digite sua resposta">
+        </div>
+
+        <!-- Tema 7 -->
+        <div class="tema" onclick="toggleConteudo('tema7')">
+            <h2>Tema 7 - Gestão Pública e Participação</h2>
+        </div>
+        <div id="tema7" class="conteudo">
+            <label>1. Como melhorar o diálogo entre população e governo?</label>
+            <input type="text" name="entry.4123456789" placeholder="Digite sua resposta">
+            <label>2. Sugestões para serviços públicos mais eficientes:</label>
+            <input type="text" name="entry.5123456789" placeholder="Digite sua resposta">
+        </div>
+
         <!-- Botão de Envio -->
         <button type="submit" class="botao-enviar">Enviar Respostas</button>
 
@@ -55,11 +111,20 @@
     <script>
         function toggleConteudo(id) {
             var conteudo = document.getElementById(id);
-            conteudo.style.display = (conteudo.style.display === "block") ? "none" : "block";
+            if (conteudo.style.display === "block") {
+                conteudo.style.display = "none";
+            } else {
+                conteudo.style.display = "block";
+            }
         }
+
+        // Impedir que os temas se fechem ao clicar dentro do input
+        document.querySelectorAll(".conteudo input").forEach(input => {
+            input.addEventListener("click", function(event) {
+                event.stopPropagation();
+            });
+        });
     </script>
 </body>
 </html>
 
-</body>
-</html>
